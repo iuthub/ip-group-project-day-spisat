@@ -63,3 +63,30 @@ h1 .changetitle {
   font-size: 20px;
   font-style: italic;
 }
+.contactWord {
+  border: solid 20px MediumTurquoise;
+  background-color: MediumTurquoise;
+}
+.marginContactDetails
+{
+ margin-top: 90px;
+}
+.backgroundForInfo
+{
+  margin-top: 35px;
+  border: solid 90px PaleTurquoise;
+  background-color: PaleTurquoise;
+}
+.aboutblog 
+{
+  background-color:PaleTurquoise;
+  border: 25px solid PaleTurquoise; 
+  border-radius: 5px 20px 5px;
+  margin-top: 2px;
+  margin-bottom: 85px;
+
+}
+.aboutTitle
+{
+  margin-top: 30px;
+}
