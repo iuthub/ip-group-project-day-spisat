@@ -1,7 +1,13 @@
+
+
+
 @extends('layouts.master')
 
 @section('content')
 
+<div>
+	@include('extra.carousel')
+</div>
 <div class="container-fluid mt-4">
 
 	<h2 class="blazingJobs">Blazing jobs</h2>

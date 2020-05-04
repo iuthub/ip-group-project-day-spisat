@@ -1,6 +1,3 @@
-@extends('layouts.master')
-
-@section('content1')
 
 	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
@@ -41,4 +38,3 @@
 			</a>
 		</div>
 
-@endsection
