@@ -15,7 +15,6 @@
 
 			@include('navbar.user_navbar')
 			<div class="main">
-
 				@yield('content')
 			</div>
 

@@ -1,15 +1,9 @@
-
-
-
 @extends('layouts.master')
-
 @section('content')
-
 <div>
 	@include('extra.carousel')
 </div>
 <div class="container-fluid mt-4">
-
 	<h2 class="blazingJobs">Blazing jobs</h2>
 </div>
 <br>
@@ -30,7 +24,6 @@
 			Deep knowledge on any test framework ( TestNG, junit, pytest)
 			Proficiency in any of code versioning system <br>
 			<a href="..."class="tetx-center">More </a></p>
-
 		</div>
 	</div>
 	<div class="container-fluid pt-3">
@@ -55,5 +48,4 @@
 					<br><a href="..."class="tetx-center">More </a></p>
 				</div>
 			</div>
-
-@endsection
+			@endsection
