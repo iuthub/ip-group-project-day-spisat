@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 	return view('jobs.jobs');
 });
+
+Route::get('/admin', function () {
+	return view('admin.adminIndex');
+});
+ 
