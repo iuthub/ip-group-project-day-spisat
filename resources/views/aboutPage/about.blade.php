@@ -1,92 +1,19 @@
-about.blade.php
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    About Us
-                </div>
-              
-                </div>
-            </div>
+@extends('layouts.master')
+@section('content')
+<div>
+    @include('extra.carousel')
+</div>
+<div class="container-fluid">
+    <div class="row aboutTitle">
+        <div class="col-12 text-center">
+            <h1 class="aboutTitle">About us</h1>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+<br>
+<div class="container-fluid pt-1">
+    <div class="row">
+        <p class="aboutblog">Wekcome to our page! Here you can find various professions and may be your dream job!!! Search for a job you definetly find the suitable job for you. Job searching can be challenging amd overwhelming, but every step you take towards finding you on the path to career success. Sometimes, a little motivation can help you get to the next step and help you keep your job search.</p>
+    </div>
+</div
+@endsection 
