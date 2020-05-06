@@ -26,3 +26,12 @@ Route::get('/admincreate', function () {
 Route::get('/adminedit', function () {
     return view('admin.adminEdit');
 });
+<<<<<<< HEAD
+=======
+ 
+
+Route::get('/forms', function () {
+	return view('forms.formsIndex');
+});
+ 
+>>>>>>> 58016c3327d1b0a641359137c0634d21d9edfa1d
