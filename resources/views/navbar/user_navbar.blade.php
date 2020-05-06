@@ -15,16 +15,8 @@
 			<li class="nav-item active p-2 ml-5 mr-5">
 				<a class="nav-link" href="">Home</a>
 			</li>
-			<li class="nav-item dropdown p-2 ">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
-				<div class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="IT.html">IT</a>
-					<a class="dropdown-item" href="medicine.html">Medicine</a>
-					<a class="dropdown-item" href="Education.html">Education</a>
-				</div>
-			</li>
 			<li class="nav-item">
-				<a class="nav-link p-3 ml-5 mr-5" href="{{route('about')}}">About</a>
+				<a class="nav-link p-3 ml-5 mr-5" href="">About</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link p-3  mr-5" href="contacts.html">Contact Us</a>
