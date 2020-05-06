@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
 	return view('aboutPage.about');
-});
+})->name('about');

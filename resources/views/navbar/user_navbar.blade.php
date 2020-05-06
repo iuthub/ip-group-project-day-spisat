@@ -24,7 +24,7 @@
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link p-3 ml-5 mr-5" href="about.html">About</a>
+				<a class="nav-link p-3 ml-5 mr-5" href="{{route('about')}}">About</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link p-3  mr-5" href="contacts.html">Contact Us</a>
