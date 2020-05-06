@@ -21,3 +21,8 @@ Route::get('/admin', function () {
 	return view('admin.adminIndex');
 });
  
+
+Route::get('/admin', function () {
+	return view('forms.formsIndex');
+});
+ 
