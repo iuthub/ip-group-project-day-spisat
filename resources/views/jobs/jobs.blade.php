@@ -23,11 +23,11 @@
 			Should have worked with REST assured API.
 			Deep knowledge on any test framework ( TestNG, junit, pytest)
 			Proficiency in any of code versioning system <br>
-			<a href="..."class="tetx-center">More </a></p>
+			<a href="..."class="text-center">More </a></p>
 		</div>
 	</div>
 	<div class="container-fluid pt-3">
-		<div class="row  styleblog ">
+		<div class="row styleblog">
 			<div class="col-12 text-center styleh2">Senior Resident - Neonatology</div>
 			<p class="text-center"><br>
 				JOB DESCRIPTION OF Senior Resident - (Paediatrics & Neonatology)
@@ -48,4 +48,4 @@
 					<br><a href="..."class="tetx-center">More </a></p>
 				</div>
 			</div>
-			@endsection
+@endsection

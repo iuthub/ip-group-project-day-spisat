@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-	return view('jobs.jobs');
-});
+Route::get('/', [
+    'uses' => 'JobsController@getJobs',
+    'as' => 'jobsJobs'
+]);
 
-Route::get('/about', function () {
-	return view('aboutPage.about');
-});
+Route::get('/about', [
+    'uses' => 'JobsController@getAbout',
+    'as' => 'aboutPageAbout'
+]);
+
+
+
