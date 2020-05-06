@@ -22,7 +22,7 @@ Route::get('/admin', function () {
 });
  
 
-Route::get('/admin', function () {
-	return view('admin.formsIndex');
+Route::get('/forms', function () {
+	return view('forms.formsIndex');
 });
  
