@@ -14,7 +14,17 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-	return view('jobs.jobs');
+    return view('jobs.jobs');
+});
+
+Route::get('/admin', function () {
+    return view('admin.adminIndex');
+});
+Route::get('/admincreate', function () {
+    return view('admin.adminCreate');
+});
+Route::get('/adminedit', function () {
+    return view('admin.adminEdit');
 });
 
 Route::get('/about', function () {
