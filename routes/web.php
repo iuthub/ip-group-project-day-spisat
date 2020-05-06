@@ -23,6 +23,6 @@ Route::get('/admin', function () {
  
 
 Route::get('/admin', function () {
-	return view('forms.formsIndex');
+	return view('admin.formsIndex');
 });
  
