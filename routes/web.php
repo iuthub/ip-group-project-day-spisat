@@ -27,11 +27,29 @@ Route::get('/contact', [
     'as' => 'extraContacts'
 ]);
 
-Route::get('/admin', [
-    'uses' => 'Jobscontroller@getAdminIndex',
-    'as' => 'adminJobs'
-]);
-Route::get('/admin/about', [
-    'uses' => 'Jobscontroller@getAdminAbout',
-    'as' => 'adminAbout'
-]);
+Route::group([
+    'prefix' => 'admin'
+], function () {
+
+
+    Route::get('/', [
+        'uses' => 'Jobscontroller@getAdminIndex',
+        'as' => 'adminJobs'
+    ]);
+    Route::get('/about', [
+        'uses' => 'Jobscontroller@getAdminAbout',
+        'as' => 'adminAbout'
+    ]);
+    Route::get('/create', [
+        'uses' => 'Jobscontroller@getAdminCreate',
+        'as' => 'adminCreate'
+    ]);
+    Route::get('/edit', [
+        'uses' => 'Jobscontroller@getAdminEdit',
+        'as' => 'adminEdit'
+    ]);
+    Route::get('/delete', [
+        'uses' => 'Jobscontroller@getAdminDelete',
+        'as' => 'adminDelete'
+    ]);
+});
