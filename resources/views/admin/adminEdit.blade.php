@@ -23,7 +23,7 @@
            id="exampleFormControlTextarea1"
             rows="3"
             name='body'
-            form='postForm'></textarea>
+            form='postForm'>{{ $post->body }}</textarea>
 
 
       <div class="form-check form-check-inline ml-2">
@@ -51,7 +51,4 @@
       </div>
 
   </div>
-
-
-
 @endsection

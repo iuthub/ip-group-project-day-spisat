@@ -3,20 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class JobsController extends Controller
 {
     public function getJobs()
     {
-        return view('job.job');
+        return view('job.job', [
+            'posts' => Post::all()
+        ]);
     }
-    public function getJobPost()
+    public function getJobPost($id)
     {
-        return view('jobPost.post');
+        return view('jobPost.post', [
+            'post'->Post::find($id)
+        ]);
     }
-    public function getJobPostbyTitle()
+    public function getJobPostbyTitle($title)
     {
-        return view('jobPost.post');
+        return view('jobPost.post', [
+            'post' => Post::where('title', 'like', $title)->first()
+        ]);
     }
 
     public function getJobInfo()
@@ -32,15 +39,22 @@ class JobsController extends Controller
 
     public function getAdminJob()
     {
-        return view('admin.adminIndex');
+        return view('admin.adminIndex', [
+            'posts' => Post::all()
+        ]);
     }
     public function getAdminAbout()
     {
         return view('admin_extra.adminAbout');
     }
-    public function getAdminEditJob()
+    public function getAdminEditJob($id)
     {
-        return view('admin.adminEdit');
+        $post = Post::find($id);
+
+        return view('admin.adminEdit', [
+            'post' => $post,
+
+        ]);
     }
     public function postAdminEditJob(Request $req)
     {
