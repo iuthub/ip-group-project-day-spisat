@@ -13,7 +13,7 @@
 		<p>{{ $post->content }}</p>
 
             <div class="container mt-0"style="text-align:center">
-                <a href="{{ route('blogPost', ['id'=> $post->id]) }}">More </a>
+                <a href="{{ route('jobPost', ['id'=> $post->id]) }}">More </a>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
 				To take detail history. Put initial treatment order.
                 To take the rounds of all the patients. To track the investigation results. Check all the vitals of the patients. To see the progress of the patient. Inform the consultant. <br></p>
                 <div class="container mt-0"style="text-align:center">
-                    <a href="...">More </a>
+                    <a href="JobPost">More </a>
                 </div>
 			</div>
 		</div>

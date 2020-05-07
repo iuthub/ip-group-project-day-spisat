@@ -15,16 +15,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [
     'uses' => 'JobsController@getJobs',
-    'as' => 'jobsJobs'
+    'as' => 'jobJobs'
 ]);
 
 Route::get('/about', [
-    'uses' => 'JobsController@getAbout',
-    'as' => 'aboutPageAbout'
+    'uses' => 'JobsController@getJobInfo',
+    'as' => 'aboutPage'
+]);
+Route::get('/post', [
+    'uses' => 'PostsController@getJobPost',
+    'as' => 'jobPost'
+]);
+
+Route::get('/postsByTitle/{title}', [
+    'uses' => 'PostsController@getJobPostbyTitle',
+    'as' => 'jobPostbyTitle'
 ]);
 Route::get('/contact', [
-    'uses' => 'Jobscontroller@getContact',
-    'as' => 'extraContacts'
+    'uses' => 'Jobscontroller@getJobContact',
+    'as' => 'Contact'
 ]);
 
 Route::group([
@@ -33,7 +42,7 @@ Route::group([
 
 
     Route::get('/', [
-        'uses' => 'Jobscontroller@getAdminIndex',
+        'uses' => 'Jobscontroller@getAdminJob',
         'as' => 'adminJobs'
     ]);
     Route::get('/about', [
@@ -41,15 +50,15 @@ Route::group([
         'as' => 'adminAbout'
     ]);
     Route::get('/create', [
-        'uses' => 'Jobscontroller@getAdminCreate',
+        'uses' => 'Jobscontroller@getAdminCreateJob',
         'as' => 'adminCreate'
     ]);
     Route::get('/edit', [
-        'uses' => 'Jobscontroller@getAdminEdit',
+        'uses' => 'Jobscontroller@getAdminEditJob',
         'as' => 'adminEdit'
     ]);
     Route::get('/delete', [
-        'uses' => 'Jobscontroller@getAdminDelete',
+        'uses' => 'Jobscontroller@getAdminDeleteJob',
         'as' => 'adminDelete'
     ]);
 });

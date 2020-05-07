@@ -33,7 +33,7 @@
 </div>
 <div class="container mt-3">
 
-    <form id="postForm" action="{{ route('adminCreatePost') }}" method="post">
+    <form id="postForm" action="{{ route('adminCreate') }}" method="post">
         @csrf
 
         <input type="submit" value="Submit">

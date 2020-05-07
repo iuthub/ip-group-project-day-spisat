@@ -7,7 +7,7 @@
 		<p>{{ $post->content }}</p>
 
             <div class="container mt-0"style="text-align:center">
-                <a href="{{ route('blogPost', ['id'=> $post->id]) }}">More </a>
+                <a href="{{ route('jobJobs', ['id'=> $post->id]) }}">Back </a>
             </div>
         </div>
     </div>

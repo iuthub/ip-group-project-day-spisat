@@ -1,32 +1,8 @@
 @extends('layouts.admin_layout')
 
 @section('content')
-<style>
-      body{background-color: azure;}
-      .borderElement {
-    background-color: azure;
-    border: 6px solid MediumTurquoise;
-    border-radius: 10px;
-    width: 70%;
-}
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: Gainsboro;
-    border:3px solid skyblue;
-    color: black;
-    padding: 16px 32px;
-    text-decoration: none;
-    cursor: pointer;
-    margin-left:60%;
-    position:absolute;
-}
-.editing{
-  font-size:45px;
- font-weight: 400;
- font-style: italic;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+@include('eror_info.error_info')
 
-    </style>
     <div class="container mt-3">
       <h1 class="text-center editing">New Post</h1>
     </div>
@@ -34,11 +10,20 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     <div class="container borderElement">
 
           <label for="formGroupExampleInput">Title</label>
-          <input type="text" class="form-control" id="formGroupExampleInput">
+          <input type="text"
+           class="form-control"
+            id="formGroupExampleInput"
+            name="title"
+			form="postForm"
+			value="{{ $post->title }}">
 
 
           <label for="exampleFormControlTextarea1">Body</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control"
+           id="exampleFormControlTextarea1"
+            rows="3"
+            name='body'
+            form='postForm'></textarea>
 
 
       <div class="form-check form-check-inline ml-2">
@@ -57,9 +42,9 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   </div>
       <div class="container mt-3">
 
-        <form id="postForm" action="" method="">
-
-
+        <form id="postForm" action="{{ route('adminEdit') }}" method="post">
+            @csrf
+            <input type="hidden" name="id" value="{{ $post->id }}">
           <input type="submit" value="Submit">
           </form>
 

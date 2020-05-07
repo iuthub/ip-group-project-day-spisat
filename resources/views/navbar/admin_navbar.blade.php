@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light bg-light">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand">
 				<img src="{{asset('images/logo.jpg')}}" width="40" height="40" class="d-inline-block align-top" alt="">
 			</a>
 			<h6 class="jobs"> Jobs for all <br>
