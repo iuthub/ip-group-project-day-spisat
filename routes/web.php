@@ -31,7 +31,7 @@ Route::get('/admin', [
     'uses' => 'Jobscontroller@getAdminIndex',
     'as' => 'adminJobs'
 ]);
-Route::get('/adminabout', [
+Route::get('/admin/about', [
     'uses' => 'Jobscontroller@getAdminAbout',
     'as' => 'adminAbout'
 ]);

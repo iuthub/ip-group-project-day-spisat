@@ -20,6 +20,8 @@ class JobsController extends Controller
     {
         return view('extra.contacts');
     }
+
+
     public function getAdminIndex()
     {
         return view('admin.adminIndex');
@@ -27,5 +29,30 @@ class JobsController extends Controller
     public function getAdminAbout()
     {
         return view('admin_extra.adminAbout');
+    }
+    public function getAdminEdit()
+    {
+        return view('admin.adminEdit');
+    }
+    public function postAdminEdit(Request $req)
+    {
+        $this->validate($req, [
+            'title' => 'required|min:4',
+            'body' => 'required|min:4'
+        ]);
+    }
+    public function getAdminCreate()
+    {
+        return view('admin.adminCreate');
+    }
+    public function postAdminCreate(Request $req)
+    {
+        $this->validate($req, [
+            'title' => 'required|min:4',
+            'body' => 'required|min:4'
+        ]);
+    }
+    public function getAdminDelete()
+    {
     }
 }
