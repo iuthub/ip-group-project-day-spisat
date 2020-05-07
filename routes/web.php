@@ -23,5 +23,17 @@ Route::get('/about', [
     'as' => 'aboutPageAbout'
 ]);
 
+Route::get('/admin', function () {
+    return view('admin.adminIndex');
+});
+Route::get('/admincreate', function () {
+    return view('admin.adminCreate');
+});
+Route::get('/adminedit', function () {
+    return view('admin.adminEdit');
+});
 
+Route::get('/contacts', function () {
+	return view('extra.contacts');
+});
 

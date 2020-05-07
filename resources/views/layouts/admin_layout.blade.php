@@ -8,14 +8,12 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&family=Noto+Sans+JP&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,600&family=Poppins:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,600&family=Poppins:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="{{ URL::to('css/style.css') }}">
+		<link rel="stylesheet"  href="{{ URL::to('admincss/adminstyle.css') }}">
 		<title>Hello, world!</title>
 	</head>
 	<body>
 
-			@include('navbar.user_navbar')
+			@include('navbar.admin_navbar')
 			<div class="main">
 				@yield('content')
 			</div>

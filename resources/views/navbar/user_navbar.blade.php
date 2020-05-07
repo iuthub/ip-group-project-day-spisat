@@ -28,6 +28,7 @@
 			</li>
 			<li class="nav-item">
 				<a class="nav-link p-3 ml-5 mr-5" href="{{ route('aboutPageAbout') }}">About</a>
+
 			</li>
 			<li class="nav-item">
 				<a class="nav-link p-3  mr-5" href="contacts.html">Contact Us</a>
