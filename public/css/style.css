@@ -92,21 +92,15 @@ font-family: 'Libre Franklin', sans-serif;
 font-family: 'Noto Sans JP', sans-serif;
 text-align: center;!important
 }
-}
-.blazingJob
+.styleblog
 {
-font-family: 'Raleway', sans-serif;
-text-align: center;!important
+border: 5px solid #5f9ea0;
+border-radius: 5px 20px 5px;
+!important
 }
 .aboutTitle
 {
   font-family: 'Nunito Sans', sans-serif;
  font-family: 'Poppins', sans-serif;
  text-align: center;!important
-}
-.blazingJob
-{
-font-family: 'Libre Franklin', sans-serif;
-font-family: 'Noto Sans JP', sans-serif;
-text-align: center;!important
 }

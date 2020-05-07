@@ -22,18 +22,16 @@ Route::get('/about', [
     'uses' => 'JobsController@getAbout',
     'as' => 'aboutPageAbout'
 ]);
+Route::get('/contact', [
+    'uses' => 'Jobscontroller@getContact',
+    'as' => 'extraContacts'
+]);
 
-Route::get('/admin', function () {
-    return view('admin.adminIndex');
-});
-Route::get('/admincreate', function () {
-    return view('admin.adminCreate');
-});
-Route::get('/adminedit', function () {
-    return view('admin.adminEdit');
-});
-
-Route::get('/contacts', function () {
-	return view('extra.contacts');
-});
-
+Route::get('/admin', [
+    'uses' => 'Jobscontroller@getAdminIndex',
+    'as' => 'adminJobs'
+]);
+Route::get('/adminabout', [
+    'uses' => 'Jobscontroller@getAdminAbout',
+    'as' => 'adminAbout'
+]);
