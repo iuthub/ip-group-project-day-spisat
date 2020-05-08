@@ -1,7 +1,15 @@
 @extends('layouts.admin_layout')
 @section('content')
-@include('eror_info.eror_info')
-<a href="{{ route ('adminCreate')}}" class="butt">New Post</a>
+
+<div class="container-fluid pt-3">
+    <div class="row">
+        <p>
+            @include('partial.info_block')
+        </p>
+
+        </div>
+    </div>
+<a href="{{ route('adminCreate') }}" class="butt">New Post</a>
 
 		<div class="container-fluid mt-5">
 			<h2 class="blazingJob" >Blazing jobs</h2>

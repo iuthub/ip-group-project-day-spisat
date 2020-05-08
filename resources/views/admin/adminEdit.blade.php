@@ -1,7 +1,9 @@
 @extends('layouts.admin_layout')
 
 @section('content')
-@include('eror_info.error_info')
+
+@include('partial.error_block')
+
 
     <div class="container mt-3">
       <h1 class="text-center editing">New Post</h1>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 
+
+
 class JobsController extends Controller
 {
     public function getJobs()
@@ -47,22 +49,6 @@ class JobsController extends Controller
     {
         return view('admin_extra.adminAbout');
     }
-    public function getAdminEditJob($id)
-    {
-        $post = Post::find($id);
-
-        return view('admin.adminEdit', [
-            'post' => $post,
-
-        ]);
-    }
-    public function postAdminEditJob(Request $req)
-    {
-        $this->validate($req, [
-            'title' => 'required|min:4',
-            'body' => 'required|min:4'
-        ]);
-    }
     public function getAdminCreateJob()
     {
         return view('admin.adminCreate');
@@ -73,8 +59,50 @@ class JobsController extends Controller
             'title' => 'required|min:4',
             'body' => 'required|min:4'
         ]);
+
+        $post = new Post([
+            'title' => $req->input('title'),
+            'body' => $req->input('body')
+
+        ]);
+        $post->save();
+
+
+        return redirect()->route('adminJobs')->with([
+            'info' => 'Updated Post: Title Post is ' . $req->input('title')
+        ]);
     }
-    public function getAdminDeleteJob()
+    public function getAdminEditJob($id)
     {
+        $post = Post::find($id);
+
+        return view('admin.adminEdit', [
+            'post' => $post,
+        ]);
+    }
+    public function postAdminEditJob(Request $req)
+    {
+        $this->validate($req, [
+            'title' => 'required|min:4',
+            'body' => 'required|min:4'
+        ]);
+
+        $post = Post::find($req->input('id'));
+        $post->title = $req->input('title');
+        $post->body = $req->input('body');
+        $post->save();
+
+
+        return redirect()->route('adminJobs')->with([
+            'info' => 'Cretaed Post: Title Post is ' . $req->input('title')
+        ]);
+    }
+
+    public function getAdminDeleteJob($id)
+    {
+        Post::find($id)->delete();
+        return redirect()->route('adminJobs')->with([
+            'info' => 'Deleted Post: Title Post id is ' . $id
+        ]);
     }
 }

@@ -49,13 +49,26 @@ Route::group([
         'uses' => 'Jobscontroller@getAdminAbout',
         'as' => 'adminAbout'
     ]);
+
     Route::get('/create', [
         'uses' => 'Jobscontroller@getAdminCreateJob',
         'as' => 'adminCreate'
     ]);
-    Route::get('/edit', [
+
+    Route::post('/create', [
+        'uses' => 'JobsController@postAdminCreateJob',
+        'as' => 'adminCreatePost'
+    ]);
+
+
+    Route::get('/edit/{id}', [
         'uses' => 'Jobscontroller@getAdminEditJob',
         'as' => 'adminEdit'
+    ]);
+
+    Route::post('/edit', [
+        'uses' => 'JobsController@postAdminEditJob',
+        'as' => 'adminEditPost'
     ]);
     Route::get('/delete', [
         'uses' => 'Jobscontroller@getAdminDeleteJob',

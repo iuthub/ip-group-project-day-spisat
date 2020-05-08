@@ -2,7 +2,9 @@
 
 @section('content')
 
-@include('eror_info.error_info')
+
+@include('partial.error_block')
+
 
 <div class="container mt-3">
     <h1 class="text-center editing">Editing Post</h1>
@@ -11,7 +13,7 @@
     <div class="container borderElement">
 
         <label for="formGroupExampleInput">Title</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" name='title' form="postForm">
+        <input type="text" class="form-control" id="formGroupExampleInput" name='title' form="postForm"/>
 
 
         <label for="exampleFormControlTextarea1">Body</label>
@@ -33,7 +35,7 @@
 </div>
 <div class="container mt-3">
 
-    <form id="postForm" action="{{ route('adminCreate') }}" method="post">
+    <form id="postForm" action="{{ route('adminCreatePost') }}" method="post">
         @csrf
 
         <input type="submit" value="Submit">
