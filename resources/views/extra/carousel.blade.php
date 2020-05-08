@@ -7,21 +7,21 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="images/12.jpg" class="" alt="..." style="width:100%; height:550px;">
+					<img src="{{asset('images/12.jpg')}}" class="" alt="..." style="width:100%; height:550px;">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Stay with us</h5>
 						<p>You can find a new job</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<img src="images/6.jpg" class="d-block" alt="..." style="width:100%; height:550px;">
+					<img src="{{asset('images/6.jpg')}}" class="d-block" alt="..." style="width:100%; height:550px;">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Follow us</h5>
 						<p>Everyone can find a dream job</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<img src="images/19.jpg" class=" d-block w-100" alt="..." style="width:100%; height:550px;">
+					<img src="{{asset('images/19.jpg')}}" class=" d-block w-100" alt="..." style="width:100%; height:550px;">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Discover us</h5>
 						<p>Diversity of jobs for anyone</p>

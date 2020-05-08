@@ -41,6 +41,12 @@
     border-radius: 5px 20px 5px;
     !important
     }
+    .styleblog1
+    {
+     font-style: italic;
+     font-weight: 400;
+
+    }
     h1 .changetitle {
     font-size: 15px;
     }
@@ -110,7 +116,7 @@
     font-family: 'Noto Sans JP', sans-serif;
     margin-left: 43%;
     }
-     
+
     .button {
       background-color: silver;
       border: none;
@@ -124,7 +130,7 @@
       cursor: pointer;
       margin-left: 750px;
     }
-    
+
     .tetx-center{
       padding: 20px;
     }
@@ -134,7 +140,7 @@
       margin-bottom: 55px;
     }
     .butt {
-      background-color: #008b8b;  
+      background-color: #008b8b;
       color: white;
       padding: 14px 25px;
       text-align: center;
@@ -143,5 +149,35 @@
       margin-top: 45px;
       margin-right: 75px;
     }
-    
-    
+
+    body {
+        background-color: azure;
+    }
+
+    .borderElement {
+        background-color: azure;
+        border: 6px solid MediumTurquoise;
+        border-radius: 10px;
+        width: 70%;
+    }
+
+    input[type=button],
+    input[type=submit],
+    input[type=reset] {
+        background-color: Gainsboro;
+        border: 3px solid skyblue;
+        color: black;
+        padding: 16px 32px;
+        text-decoration: none;
+        cursor: pointer;
+        margin-left: 60%;
+        position: absolute;
+    }
+
+    .editing {
+        font-size: 45px;
+        font-weight: 400;
+        font-style: italic;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+

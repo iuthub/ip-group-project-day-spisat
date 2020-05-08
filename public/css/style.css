@@ -41,6 +41,7 @@ border: 5px solid #5f9ea0;
 border-radius: 5px 20px 5px;
 !important
 }
+
 h1 .changetitle {
 font-size: 15px;
 }
@@ -103,4 +104,7 @@ border-radius: 5px 20px 5px;
   font-family: 'Nunito Sans', sans-serif;
  font-family: 'Poppins', sans-serif;
  text-align: center;!important
+}
+.more {
+    text-align: center;!important
 }

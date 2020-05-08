@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.admin_layout')
 @section('content')
 <div>
     @include('extra.carousel')

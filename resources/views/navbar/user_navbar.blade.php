@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-light">
-	<a class="navbar-brand" href="#">
-		<img src="images/logo.jpg" width="40" class="d-inline-block align-top" alt="">
+	<a class="navbar-brand">
+		<img src="{{asset('images/logo.jpg')}}" width="40" class="d-inline-block align-top" alt="">
 	</a>
 	<h6 class="jobs"> Jobs for all <br>
 	Announcement board
@@ -16,15 +16,15 @@
                 <img src="images/logo.jpg" width="40" class="d-inline-block align-top" alt="">
             </li>--}}
 			<li class="nav-item active p-2 ml-5 mr-5">
-				<a class="nav-link" href="{{ route('jobsJobs') }}">Home</a>
+				<a class="nav-link" href="{{ route('jobJobs') }}">Home</a>
 			</li>
 
 			<li class="nav-item">
-				<a class="nav-link p-3 ml-5 mr-5" href="{{ route('aboutPageAbout') }}">About</a>
+				<a class="nav-link p-3 ml-5 mr-5" href="{{ route('aboutPage') }}">About</a>
 
 			</li>
 			<li class="nav-item">
-				<a class="nav-link p-3  mr-5" href="{{ route('extraContacts') }}">Contact Us</a>
+				<a class="nav-link p-3  mr-5" href="{{ route('Contact') }}">Contact Us</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link p-3 mr-5" href="#">Log In</a>
