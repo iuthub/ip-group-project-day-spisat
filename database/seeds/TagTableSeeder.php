@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
 use App\Tag;
+
 
 class TagTableSeeder extends Seeder
 {
@@ -13,20 +13,23 @@ class TagTableSeeder extends Seeder
      */
     public function run()
     {
-        //
-
         $tag = new Tag([
-            'name' => 'Technology'
+            'name' => 'Programming'
         ]);
         $tag->save();
 
         $tag = new Tag([
-            'name' => 'Information'
+            'name' => 'Medicine'
         ]);
         $tag->save();
 
         $tag = new Tag([
-            'name' => 'World'
+            'name' => 'Education'
+        ]);
+        $tag->save();
+
+        $tag = new Tag([
+            'name' => 'Others'
         ]);
         $tag->save();
     }

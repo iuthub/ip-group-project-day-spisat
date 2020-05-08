@@ -19,6 +19,11 @@
         <div class="container-fluid pt-3">
             <div class="row  styleblog ">
                 <div class="col-12 text-center styleh1">{{ $post->title }} </div>
+                <div class="col-12 text-center styleh5">
+                    @foreach($post->tags as $tag)
+                        {{ $tag->name }}&nbsp;
+                    @endforeach
+                </div>
                 <div class="col-12 text-center">{{ $post->body }} <br>
 
                         <a href="{{ route('adminEdit', ['id'=>  $post->id ]) }}">Edit</a>

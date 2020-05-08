@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
-
+use App\Tag;
 
 
 class JobsController extends Controller
@@ -51,7 +51,11 @@ class JobsController extends Controller
     }
     public function getAdminCreateJob()
     {
-        return view('admin.adminCreate');
+        $tags = Tag::all();
+        return view('admin.adminCreate', [
+            'tags' => $tags
+
+        ]);
     }
     public function postAdminCreateJob(Request $req)
     {
@@ -67,6 +71,7 @@ class JobsController extends Controller
         ]);
         $post->save();
 
+        $post->tags()->attach($req->input('tags') == null ? [] : $req->input('tags'));
 
         return redirect()->route('adminJobs')->with([
             'info' => 'Created New Post: Title Post is ' . $req->input('title')
@@ -75,9 +80,11 @@ class JobsController extends Controller
     public function getAdminEditJob($id)
     {
         $post = Post::find($id);
+        $tags = Tag::all();
 
         return view('admin.adminEdit', [
-            'post' => $post
+            'post' => $post,
+            'tags' => $tags
         ]);
     }
     public function postAdminEditJob(Request $req)
@@ -91,6 +98,8 @@ class JobsController extends Controller
         $post->title = $req->input('title');
         $post->body = $req->input('body');
         $post->save();
+
+        $post->tags()->sync($req->input('tags') == null ? [] : $req->input('tags'));
 
 
         return redirect()->route('adminJobs')->with([

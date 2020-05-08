@@ -28,18 +28,15 @@
             form='postForm'>{{ $post->body }}</textarea>
 
 
-      <div class="form-check form-check-inline ml-2">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">IT sphere</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">Medicine sphere</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-        <label class="form-check-label" for="inlineRadio3">Education sphere</label>
-      </div>
+            <div class="checkbox mt-2">
+                <p class="float-left mt-0 mr-2">Tags</p>&nbsp;&nbsp;&nbsp;
+                @foreach($tags as $tag)
+              {{ $tag->name }}  <label><input type="checkbox"name="tags[]" form="postForm"
+                {{ 'checked'?$post->tags->contains($tag->id): ''}}
+                value="{{ $tag->id}}" }}>&nbsp;&nbsp;&nbsp;</label>
+                @endforeach
+              </div>
+
     </div>
   </div>
       <div class="container mt-3">
