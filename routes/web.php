@@ -22,8 +22,8 @@ Route::get('/about', [
     'uses' => 'JobsController@getJobInfo',
     'as' => 'aboutPage'
 ]);
-Route::get('/post', [
-    'uses' => 'PostsController@getJobPost',
+Route::get('/post/{id}', [
+    'uses' => 'JobsController@getJobPost',
     'as' => 'jobPost'
 ]);
 
@@ -70,7 +70,7 @@ Route::group([
         'uses' => 'JobsController@postAdminEditJob',
         'as' => 'adminEditPost'
     ]);
-    Route::get('/delete', [
+    Route::get('/delete/{id}', [
         'uses' => 'Jobscontroller@getAdminDeleteJob',
         'as' => 'adminDelete'
     ]);

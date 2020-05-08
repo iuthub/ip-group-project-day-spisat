@@ -6,7 +6,7 @@
 
 
     <div class="container mt-3">
-      <h1 class="text-center editing">New Post</h1>
+      <h1 class="text-center editing">Editing Post</h1>
     </div>
   <div class="container mt-5">
     <div class="container borderElement">
@@ -44,7 +44,7 @@
   </div>
       <div class="container mt-3">
 
-        <form id="postForm" action="{{ route('adminEdit') }}" method="post">
+        <form id="postForm" action="{{ route('adminEditPost') }}" method="post">
             @csrf
             <input type="hidden" name="id" value="{{ $post->id }}">
           <input type="submit" value="Submit">

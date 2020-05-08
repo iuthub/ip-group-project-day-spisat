@@ -3,10 +3,10 @@
 
 <div class="container-fluid pt-3">
     <div class="row">
-        <p>
-            @include('partial.info_block')
-        </p>
+        <div class="col-12 text-center">
+            <h4 class="styleblog1"> @include('partial.info_block')</h4>
 
+        </div>
         </div>
     </div>
 <a href="{{ route('adminCreate') }}" class="butt">New Post</a>
@@ -18,10 +18,10 @@
  @foreach($posts as $post)
         <div class="container-fluid pt-3">
             <div class="row  styleblog ">
-                <div class="col-12 text-center styleh1">>{{ $post->title }} </div>
-                <p>{{ $post->body }}</p>
-                    <div class="container mt-0"style="text-align:center">
-                        <a href="{{ route('adminEdit', ['id'=> $post->id ]) }}">Edit</a> |
+                <div class="col-12 text-center styleh1">{{ $post->title }} </div>
+                <div class="col-12 text-center">{{ $post->body }} <br>
+
+                        <a href="{{ route('adminEdit', ['id'=>  $post->id ]) }}">Edit</a>
                         <a href="{{ route('adminDelete', ['id'=>  $post->id ]) }}">Delete</a>
                     </div>
                 </div>

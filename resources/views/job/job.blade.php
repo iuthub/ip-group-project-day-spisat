@@ -8,15 +8,14 @@
 </div>
 <br>
 @foreach($posts as $post)
-<div class="container-fluid pt-3">
-	<div class="row  styleblog ">
-		<div class="col-12 text-center styleh1">>{{ $post->title }} </div>
-		<p>{{ $post->content }}</p>
+    <div class="container-fluid pt-3">
+        <div class="row  styleblog ">
+            <div class="col-12 text-center styleh1">{{ $post->title }} </div>
+            <div class="col-12 text-center">{{ $post->body }} <br>
 
-            <div class="container mt-0"style="text-align:center">
                 <a href="{{ route('jobPost', ['id'=> $post->id]) }}">More </a>
+                </div>
             </div>
         </div>
-    </div>
     @endforeach
 @endsection

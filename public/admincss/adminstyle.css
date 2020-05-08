@@ -41,6 +41,12 @@
     border-radius: 5px 20px 5px;
     !important
     }
+    .styleblog1
+    {
+     font-style: italic;
+     font-weight: 400;
+
+    }
     h1 .changetitle {
     font-size: 15px;
     }

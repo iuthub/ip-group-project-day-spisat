@@ -18,7 +18,7 @@ class JobsController extends Controller
     public function getJobPost($id)
     {
         return view('jobPost.post', [
-            'post'->Post::find($id)
+            'post' => Post::find($id)
         ]);
     }
     public function getJobPostbyTitle($title)
@@ -69,7 +69,7 @@ class JobsController extends Controller
 
 
         return redirect()->route('adminJobs')->with([
-            'info' => 'Updated Post: Title Post is ' . $req->input('title')
+            'info' => 'Created New Post: Title Post is ' . $req->input('title')
         ]);
     }
     public function getAdminEditJob($id)
@@ -77,7 +77,7 @@ class JobsController extends Controller
         $post = Post::find($id);
 
         return view('admin.adminEdit', [
-            'post' => $post,
+            'post' => $post
         ]);
     }
     public function postAdminEditJob(Request $req)
@@ -94,7 +94,7 @@ class JobsController extends Controller
 
 
         return redirect()->route('adminJobs')->with([
-            'info' => 'Cretaed Post: Title Post is ' . $req->input('title')
+            'info' => 'Edit Post: Title Post is ' . $req->input('title')
         ]);
     }
 
