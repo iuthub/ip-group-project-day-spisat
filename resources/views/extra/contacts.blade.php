@@ -42,9 +42,9 @@
 
                     <p class="fas fa-home mr-3 "></i> Tashkent, MU 10012, Uzbekistan</p>
 
-                    <p class="fas fa-envelope mr-3 "></i> info@example.com</p>
+                    <p class="fas fa-envelope mr-3 "></i> +998 99 999 95 95</p>
 
-                    <p class="fas fa-phone mr-3 "></i> + 998 97 742 70 12</p>
+                    <p class="fas fa-phone mr-3 "></i> + 998 98 899 95 95</p>
 
                 </div>
             </div>

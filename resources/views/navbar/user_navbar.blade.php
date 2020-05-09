@@ -12,9 +12,6 @@
 	</button>
 	<div class="navbar-collapse collapse" id="navbarCustom">
 		<ul class="navbar-nav">
-           {{-- <li class="nav-item">
-                <img src="images/logo.jpg" width="40" class="d-inline-block align-top" alt="">
-            </li>--}}
 			<li class="nav-item active p-2 ml-5 mr-5">
 				<a class="nav-link" href="{{ route('jobJobs') }}">Home</a>
 			</li>
