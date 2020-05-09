@@ -15,6 +15,7 @@ class JobsController extends Controller
             'posts' => Post::all()
         ]);
     }
+
     public function getJobPost($id)
     {
         return view('jobPost.post', [
@@ -40,6 +41,13 @@ class JobsController extends Controller
 
 
     public function getAdminJob()
+    {
+        return view('admin.adminIndex', [
+            'posts' => Post::all()
+        ]);
+    }
+
+    public function getAdminJobs()
     {
         return view('admin.adminIndex', [
             'posts' => Post::all()
