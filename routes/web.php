@@ -79,7 +79,9 @@ Route::group([
         'uses' => 'Jobscontroller@getAdminDeleteJob',
         'as' => 'adminDelete'
     ]);
+    Route::get('/admin', function () {
+        return view('admin.adminInedx');
+    })->name('Registerpanel');
 });
 
 Auth::routes(['verify' => true]);
-Route::get('/admin', 'JobsController@getAdminJob')->name('home');
