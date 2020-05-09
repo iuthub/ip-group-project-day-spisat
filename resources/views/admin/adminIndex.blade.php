@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout')
 @section('content')
 
-<div class="container-fluid pt-3">
+<div class="container pt-3">
     <div class="row">
         <div class="col-12 text-center">
             <h4 class="styleblog1"> @include('partial.info_block')</h4>

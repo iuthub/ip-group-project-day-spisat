@@ -9,7 +9,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,600&family=Poppins:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="{{ URL::to('css/style.css') }}">
-		<title>Hello, world!</title>
+		<title>JobsForAll</title>
 	</head>
 	<body>
 
