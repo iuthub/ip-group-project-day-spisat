@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Tag;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class JobsController extends Controller
 {
