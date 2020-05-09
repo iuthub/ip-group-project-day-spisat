@@ -37,13 +37,18 @@ Route::get('/contact', [
 ]);
 
 Route::group([
-    'prefix' => 'admin'
+    'prefix' => 'admin',
+    'middleware' => ['auth', 'verified']
 ], function () {
 
 
-    Route::get('/', [
+    Route::get('/adminpage', [
         'uses' => 'Jobscontroller@getAdminJob',
         'as' => 'adminJobs'
+    ]);
+    Route::get('/', [
+        'uses' => 'Jobscontroller@getAdminJobs',
+        'as' => 'adminJob'
     ]);
     Route::get('/about', [
         'uses' => 'Jobscontroller@getAdminAbout',
@@ -76,6 +81,5 @@ Route::group([
     ]);
 });
 
-Auth::routes();
-
-Route::get('/home', 'JobsController@getJobs')->name('home');
+Auth::routes(['verify' => true]);
+Route::get('/admin', 'JobsController@getAdminJob')->name('home');
