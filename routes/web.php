@@ -75,3 +75,7 @@ Route::group([
         'as' => 'adminDelete'
     ]);
 });
+
+Auth::routes();
+
+Route::get('/home', 'JobsController@getJobs')->name('home');
