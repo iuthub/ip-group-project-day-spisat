@@ -6,7 +6,7 @@
 
 
     <div class="container mt-3">
-      <h1 class="text-center editing">Editing Post</h1>
+      <h1 class="text-center editing">Editing a vacancy</h1>
     </div>
   <div class="container mt-5">
     <div class="container borderElement">
